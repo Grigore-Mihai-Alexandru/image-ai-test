@@ -7,14 +7,12 @@ async function analyzeImage (image){
         });
 
         // example of a specific thing to look for:
-        const labeldetection = await client.labelDetection(image);
-        return {labeldetection};
+        const labeldetection = await client.labelDetection(image); return {labeldetection};
     }catch(error){
         console.error("error:",error);
     }
 
 } 
-
 (async () => {
     const imageAn = await analyzeImage("images.png")
     console.log(imageAn);
